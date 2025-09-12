@@ -38,6 +38,7 @@
 <span style="color:white"><span>
 3. What essential invariant must hold on the state? How is it preserved?
 - An essential invariant that must hold in this state is that each username in `Users` is unique. It is preserved by the precondition on the `register` action--only create the new user if the username doesn't currently exist.
+
 4. One widely used extension of this concept requires that registration be confirmed by email. Extend the concept to include this functionality.\
 **concept** PasswordAuthenticationWithEmailConfirmation \
 **purpose** limit access to known users \
@@ -113,7 +114,7 @@ In general, GitHub should avoid using language about the similarities of passwor
 
 
 ### Billable Hours Tracking
-**concept** BillableHoursTracking\
+**concept** BillableHoursTracking[`Employee`, `Project`]\
 **purpose** Keep track of work sessions for employees on projects so that billable hours can be calculated correctly\
 **principle** An employee starts a session by choosing a project and gives a description of the work, the system records the start time and keeps the session open, the system records the end time when the employee ends the session. If a session is left open unintentionally, the system will close the session. Finally, billable hours are calculated\
 **state**\
@@ -143,7 +144,7 @@ In general, GitHub should avoid using language about the similarities of passwor
 
 
 ### Conference Room Booking
-**concept** ConferenceRoomBooking\
+**concept** ConferenceRoomBooking[`User`]\
 **purpose** Allow users to reserve conference rooms for meetings, prevents overlapping reservations\
 **principle** A user selects a room, start time, and end time, the system creates a booking if the room is available, users may later cancel their bookings, and the system maintains a record of both active and canceled bookings\
 **state**\
