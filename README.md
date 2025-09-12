@@ -3,5 +3,5 @@
 
 
 # Table of Contents
-[Link to Assignment 1](assignments/assignment1.md)
+[Link to Assignment 1](assignments/assignment1.md)\
 [Link to Problem Set 1](assignments/problem_set1.md)
